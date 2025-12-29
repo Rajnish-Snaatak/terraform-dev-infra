@@ -1,3 +1,8 @@
+
+output "vpc_id" {
+  value = aws_vpc.dev_vpc.id
+}
+
 output "public_subnets" {
   value = [
     aws_subnet.public_1.id,
@@ -21,7 +26,11 @@ output "database_subnet" {
   value = aws_subnet.database.id
 }
 
-output "nat_gateway_id" {
-  value = aws_nat_gateway.nat.id
+output "alb_sg_id" {
+  value = aws_security_group.alb_sg.id
+}
+
+output "alb_listener_arn" {
+  value = aws_lb_listener.http.arn
 }
 
