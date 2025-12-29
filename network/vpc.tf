@@ -3,8 +3,7 @@ resource "aws_vpc" "dev_vpc" {
   enable_dns_support   = true
   enable_dns_hostnames = true
 
-  tags = merge(local.common_tags, {
-    Name = "dev-vpc-ot-ms"
-  })
+  tags = {
+    Name = "Dev-OTMS-VPC"
+  }
 }
-
