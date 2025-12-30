@@ -1,5 +1,5 @@
 variable "app_name" {
-  default = "salary-app"
+  default = "notification-app"
 }
 
 variable "instance_type" {
@@ -7,11 +7,15 @@ variable "instance_type" {
 }
 
 variable "ami_id" {
-  default = "ami-0ed8011b4dd19fbad"
+  description = "AMI for notification service"
+  type        = string
+  default     = "ami-042d81395dfc502e7"
 }
 
 variable "key_name" {
-  default = "Dev-OTMS-Terraform"
+  description = "EC2 key pair name"
+  type        = string
+  default     = "OTMS-notify-tf"
 }
 
 variable "desired_capacity" {

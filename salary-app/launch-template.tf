@@ -6,7 +6,7 @@ resource "aws_launch_template" "salary_lt" {
 
   vpc_security_group_ids = [aws_security_group.salary_sg.id]
 
-  #user_data = base64encode(file("${path.module}/user-data.sh"))
+#  user_data = base64encode(file("${path.module}/user-data.sh"))
 
   tag_specifications {
     resource_type = "instance"

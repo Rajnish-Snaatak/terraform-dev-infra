@@ -1,5 +1,5 @@
 variable "app_name" {
-  default = "salary-app"
+  default = "employee-app"
 }
 
 variable "instance_type" {
@@ -7,7 +7,7 @@ variable "instance_type" {
 }
 
 variable "ami_id" {
-  default = "ami-0ed8011b4dd19fbad"
+  default = "ami-09ecd31573861d7a9"
 }
 
 variable "key_name" {

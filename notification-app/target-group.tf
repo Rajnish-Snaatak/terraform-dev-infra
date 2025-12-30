@@ -1,0 +1,15 @@
+resource "aws_lb_target_group" "notification_tg" {
+  name     = "notification-tg"
+  port     = 5000
+  protocol = "HTTP"
+  vpc_id   = data.terraform_remote_state.network.outputs.vpc_id
+
+  health_check {
+    path                = "/health"
+    interval            = 30
+    timeout             = 5
+    healthy_threshold   = 2
+    unhealthy_threshold = 2
+    matcher             = "200"
+  }
+}
